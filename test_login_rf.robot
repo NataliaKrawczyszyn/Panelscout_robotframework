@@ -66,6 +66,7 @@ Players page
     Click on the Sign in button
     Click on the Players button
     Assert players page
+    Click on the Sign out button
     [Teardown]  Close Browser
 
 
@@ -118,5 +119,5 @@ Click on the Players button
     Click Element       ${PLAYERSBUTTON}
 Assert players page
     Wait Until Element Is Visible       ${SEARCHBAR}
-    Title Should Be     Players (4391) page 1
+    Title Should Be     Players (4392) page 1
 
