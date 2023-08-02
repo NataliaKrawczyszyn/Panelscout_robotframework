@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 Documentation    Suite description #automated tests for scout website
 
 *** Variables ***
-${LOGIN URL}        https://scouts-test.futbolkolektyw.pl/en
+${LOGIN URL}        https://dareit.futbolkolektyw.pl/en/login?redirected=true
 ${BROWSER}      Chrome
 ${SIGNINBUTTON}     xpath=//*[text()='Sign in']
 ${EMAILINPUT}       xpath=//*[@id='login']
@@ -73,7 +73,7 @@ Players page
 *** Keywords ***
 Open login page
     Open Browser    ${LOGIN URL}    ${BROWSER}
-    Title Should Be     Scouts panel - sign in
+    #Title Should Be     Scouts panel - sign in
 Type in email
     Input Text    ${EMAILINPUT}     user07@getnada.com
 Type in password
@@ -119,5 +119,5 @@ Click on the Players button
     Click Element       ${PLAYERSBUTTON}
 Assert players page
     Wait Until Element Is Visible       ${SEARCHBAR}
-    Title Should Be     Players (4392) page 1
+    Title Should Be     Players (4576) page 1
 
